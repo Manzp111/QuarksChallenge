@@ -1,5 +1,5 @@
 ﻿from django.urls import path
-from .views import create_user, get_user
+from .views import create_user, get_user_detail
 
 urlpatterns = [
     path('', create_user),          # POST
