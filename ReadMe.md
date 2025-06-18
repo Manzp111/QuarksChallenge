@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Simple In-Memory Django REST API
 
 This is a basic REST API built using Django and Django REST Framework It allows to:
@@ -23,3 +24,13 @@ Python
 Django
 Django REST Framework
 
+=======
+
+Here it is how this system works
+
+1. Once run the project it direct open rest framework as entry point of this stytem
+
+2. if you want to add user you need to add data in JSON format
+
+3. if you write (`port/user/id/`) it open the user detail accordint to the id you privide on url
+>>>>>>> 74f50a6 (Add explanation)

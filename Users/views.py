@@ -3,11 +3,11 @@ from rest_framework.response import Response
 from rest_framework import status
 
 # In-memory storage
-users = {}
+users = {} # dictionary to store users with ID as key
 next_id = 1  # starts from 1 and increments manually
 
 @api_view(['POST'])
-def create_user(request):
+def create_user(request): # function to create user
     global next_id
     name = request.data.get('name')
     email = request.data.get('email')
@@ -25,14 +25,14 @@ def create_user(request):
 
 
 @api_view(['GET'])
-def get_user_detail(request, id):
+def get_user_detail(request, id): # function to get user details by ID
     try:
         id = int(id)
     except ValueError:
-        return Response({'error': 'Invalid ID format.'}, status=400)
+        return Response({'Invalid ID format.'}, status=400)
 
     user = users.get(id)
     if not user:
-        return Response({'error': 'User not found.'}, status=404)
+        return Response({'User not found.'}, status=404)
 
     return Response(user)
